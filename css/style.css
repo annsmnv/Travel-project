@@ -710,18 +710,19 @@ img{
     grid-column: span 2;
 }
 
-.places_card-pic-lg {
-    height: 354px;
+.places_card-pic {
     width: 100%;
-    object-fit: cover;
     transition: .15s all;
 }
 
-.places_card-pic-small {
-    height: 283px;
-    width: 100%;
+.places_card-pic_size-lg {
+    height: 354px;
     object-fit: cover;
-    transition: .15s all;
+}
+
+.places_card-pic_size-small {
+    height: 283px;
+    object-fit: cover;
 }
 
 .places_card-link {
