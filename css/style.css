@@ -365,6 +365,8 @@ textarea {
     padding: 0.2em 0;
 }
 
+/* fonts */
+
 /* lato-regular - latin */
 @font-face {
     font-family: 'Lato';
@@ -373,42 +375,44 @@ textarea {
     src: local(''),
          url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/lato-v23-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* lato-700 - latin */
-    @font-face {
+}
+
+/* lato-700 - latin */
+@font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     src: local(''),
          url('../fonts/lato-v23-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/lato-v23-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* lato-900 - latin */
-  @font-face {
+}
+
+/* lato-900 - latin */
+@font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 900;
     src: local(''),
          url('../fonts/lato-v23-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/lato-v23-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
+}
 
-  html {
+html {
     box-sizing: border-box;
-  }
+}
 
-  *, *::after, *::before {
+*, *::after, *::before {
     box-sizing: inherit;
-  }
+}
 
-  body {
+body {
     font-family: 'Lato';
     font-style: normal;
     font-size: 16px;
     line-height: 1.2;
     font-weight: normal;
     color: #102746;
-  }
+}
 
 img{
     max-width: 100%;
@@ -444,7 +448,8 @@ img{
     left: 0;
 }
 
-/*Header styles start*/
+
+/*Header (logo +navigation) styles start*/
 .header {
     position: fixed;
     top: 0;
@@ -460,34 +465,33 @@ img{
     padding-top: 56px;
 }
 
-  .header_list {
+.header_list {
     display: flex;
     flex-wrap: wrap;
-  }
+}
 
-  .header_item {
+.header_item {
     margin-right: 82px;
-  }
-  .header_item:last-child {
-    margin-right: 0;
-  }
+}
 
-  .header_link {
+.header_item:last-child {
+    margin-right: 0;
+}
+
+.header_link {
     font-size: 18px;
     line-height: 24px;
     color: #FFFFFF;
     text-decoration: none;
-  }
+}
 
-  .header_link:hover, .header_link:focus, .header_link:active {
+.header_link:hover, .header_link:focus, .header_link:active {
     opacity: 0.75;
-  }
-
-/* Header styles end */
+}
+/* Header (logo +navigation) styles end */
 
 
 /* Intro styles start */
-
 .intro {
     min-height: 64pc;
     background: url(../img/intro-bg.jpg) no-repeat center;
@@ -551,9 +555,10 @@ img{
 .search-form_submit:hover, .search-form_submit:active, .search-form_submit:focus {
     background: #156bdc;
 }
+/* Intro styles end */
+
 
 /* Benefits styles start */
-
 .benefits {
     margin-bottom: 131px;
 }
@@ -628,11 +633,10 @@ img{
 .benefits_card-more:hover, .benefits_card-more:focus {
     background: url(../img/svg/arrow.svg) no-repeat right center;
 }
-
 /* Benefits styles end */
 
-/* Places styles start */
 
+/* Places styles start */
 .places {
     margin-bottom: 131px;
 }
@@ -733,11 +737,10 @@ img{
     height: 100%;
     z-index: 4;
 }
-
 /* Places styles end */
 
-/* Tours styles start */
 
+/* Tours styles start */
 .tours {
     margin-bottom: 139px;
 }
@@ -784,5 +787,86 @@ img{
     padding-left: 47px;
 }
 /* Tours styles end */
+
+
+/* 'Top places to visit' styles start */
+.top {
+    margin-bottom: 86px;
+}
+
+.top-title {
+    margin-bottom: 54px;
+}
+
+.top_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 58px;
+}
+
+.top_card-pic {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.top_card-stat {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(21, 24, 36, 0.6);
+    padding: 16px 25px;
+}
+
+.top_card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin: 0 auto 0 0;
+}
+
+.top_card-likes {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-right: 20px;
+    background: url(../img/svg/heart.svg) no-repeat right;
+    margin-right: 14px;
+}
+
+.top_card-comments {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-right: 23px;
+    background: url(../img/svg/comment.svg) no-repeat right;
+}
+
+.top_card-description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 43px;
+}
+
+.top_card-more {
+    background-color: #006DFE;
+    padding: 12px 19px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.top_card-more:hover, .top_card-more:active, .top_card-more:focus {
+    background: #156bdc;
+}
+/* 'Top places to visit' styles end */
 
 
